@@ -31,6 +31,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.nada.photoweatherapp.R;
+import com.nada.photoweatherapp.database.AppDatabase;
 import com.nada.photoweatherapp.model.Main;
 import com.nada.photoweatherapp.model.Weather;
 import com.nada.photoweatherapp.api.WeatherAPI;
@@ -48,7 +49,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     // initialize variables
-    private Button btn_camera, btn_history;
+    private Button btn_camera, btn_history, btn_save_pic;
 //    private ShareButton sbtn_fb;
 //    private LoginButton sbtnloginfb;
     private ImageView pic;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         // assign variables
         btn_camera = (Button) findViewById(R.id.btn_camera);
         btn_history = (Button) findViewById(R.id.btn_history);
+        btn_save_pic = (Button) findViewById(R.id.btn_save_pic);
 //        sbtnloginfb = (LoginButton) findViewById(R.id.sbtnloginfb);
 //        sbtn_fb = (ShareButton) findViewById(R.id.sbtn_fb);
         pic = (ImageView) findViewById(R.id.iv_pic);
@@ -105,6 +107,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 goToAlbum();
+            }
+        });
+
+        btn_save_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("----- going to insert into room -----");
             }
         });
 
@@ -202,6 +211,8 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 100) {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             pic.setImageBitmap(bitmap);
+
+            btn_save_pic.setVisibility(View.VISIBLE);
 
 //            sbtn_fb.setVisibility(View.VISIBLE);
 //            sbtnloginfb.setVisibility(View.VISIBLE);

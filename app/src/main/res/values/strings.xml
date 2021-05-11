@@ -5,4 +5,5 @@
     <string name="history">History</string>
     <string name="facebook_app_id">288403692976939</string>
     <string name="fb_btn">login to share on facebook</string>
+    <string name="save_pic">Save the picture</string>
 </resources>

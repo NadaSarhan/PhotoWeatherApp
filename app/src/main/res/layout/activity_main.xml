@@ -71,6 +71,14 @@
 <!--            android:textSize="@dimen/_20sdp"-->
 <!--            android:visibility="invisible"-->
 <!--            android:text="@string/fb_btn"/>-->
+        <Button
+            android:id="@+id/btn_save_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:text="@string/save_pic"/>
     </LinearLayout>
 
 </LinearLayout>

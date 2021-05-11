@@ -12,12 +12,12 @@ import io.reactivex.Single;
 
 @Dao
 public interface AlbumDAO {
-    @Insert
-    Comparable insertPic(Bitmap pic);
+//    @Insert
+//    Comparable insertPic(Bitmap pic);
 
-    @Insert
-    Comparable insertText(Album str);
+//    @Insert
+//    Comparable insertText(Album str);
 
-    @Query("select * from album")
-    Single<List<Album>> getAlbum();
+//    @Query("select * from album")
+//    Single<List<Album>> getAlbum();
 }

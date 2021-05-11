@@ -3,6 +3,7 @@ package com.nada.photoweatherapp.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
 
     @Override
     public void onBindViewHolder(@NonNull AlbumViewHolder holder, int position) {
-        holder.text.setText(picList.get(position).getText());
+//        holder.text.setText(picList.get(position).getText());
     }
 
     @Override
@@ -40,12 +41,10 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     }
 
     public class AlbumViewHolder extends RecyclerView.ViewHolder {
-//        private ImageView iv_pic;
-        private TextView text;
+        private ImageView iv_pic;
         public AlbumViewHolder(@NonNull View itemView) {
             super(itemView);
-//            iv_pic = itemView.findViewById(R.id.iv_pic);
-            text = itemView.findViewById(R.id.text);
+            iv_pic = itemView.findViewById(R.id.iv_pic);
         }
     }
 
