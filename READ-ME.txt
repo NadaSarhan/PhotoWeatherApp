@@ -1,0 +1,9 @@
+I want to apologise for not finishing the task. I faced some issues in the code so I spent my time trying to solve it. 
+What I did:
+- I got the Location of the user mobile to get the weather of the country.
+- I finished the capture picture and displayed it on the app
+- I faced an exception in facebook code
+- I faced an exception in room database code
+
+I will try to solve the exceptions even after sending this mail(not to miss the deadline) 
+Can you send me a feedback about the code so i can learn more.
