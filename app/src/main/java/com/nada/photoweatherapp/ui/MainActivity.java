@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
     // initialize variables
     private Button btn_camera, btn_history;
-    private ShareButton sbtn_fb;
-    private LoginButton sbtnloginfb;
+//    private ShareButton sbtn_fb;
+//    private LoginButton sbtnloginfb;
     private ImageView pic;
 
     private String country;
@@ -70,15 +70,15 @@ public class MainActivity extends AppCompatActivity {
         // assign variables
         btn_camera = (Button) findViewById(R.id.btn_camera);
         btn_history = (Button) findViewById(R.id.btn_history);
-        sbtnloginfb = (LoginButton) findViewById(R.id.sbtnloginfb);
-        sbtn_fb = (ShareButton) findViewById(R.id.sbtn_fb);
+//        sbtnloginfb = (LoginButton) findViewById(R.id.sbtnloginfb);
+//        sbtn_fb = (ShareButton) findViewById(R.id.sbtn_fb);
         pic = (ImageView) findViewById(R.id.iv_pic);
 
         // for facebook
         // Initialize facebook SDK.
-        FacebookSdk.sdkInitialize(MainActivity.this.getApplicationContext());
+//        FacebookSdk.sdkInitialize(MainActivity.this.getApplicationContext());
         // Create a callbackManager to handle the login responses.
-        callbackManager = CallbackManager.Factory.create();
+//        callbackManager = CallbackManager.Factory.create();
 
         // initialized fusedLocationProviderClient
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -203,22 +203,22 @@ public class MainActivity extends AppCompatActivity {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             pic.setImageBitmap(bitmap);
 
-            sbtn_fb.setVisibility(View.VISIBLE);
-            sbtnloginfb.setVisibility(View.VISIBLE);
-
-            // Call callbackManager.onActivityResult to pass login result to the LoginManager via callbackManager.
-            callbackManager.onActivityResult(requestCode, resultCode, data);
-            // Define Content want to share
-            BitmapDrawable bitmapDrawable = (BitmapDrawable) pic.getDrawable();
-            Bitmap bit = bitmapDrawable.getBitmap();
-            SharePhoto sharePhoto = new SharePhoto.Builder()
-                    .setBitmap(bit)
-                    .build();
-            SharePhotoContent sharePhotoContent = new SharePhotoContent.Builder()
-                    .addPhoto(sharePhoto)
-                    .build();
-            // Set the content want to share.
-            sbtn_fb.setShareContent(sharePhotoContent);
+//            sbtn_fb.setVisibility(View.VISIBLE);
+//            sbtnloginfb.setVisibility(View.VISIBLE);
+//
+//            // Call callbackManager.onActivityResult to pass login result to the LoginManager via callbackManager.
+//            callbackManager.onActivityResult(requestCode, resultCode, data);
+//            // Define Content want to share
+//            BitmapDrawable bitmapDrawable = (BitmapDrawable) pic.getDrawable();
+//            Bitmap bit = bitmapDrawable.getBitmap();
+//            SharePhoto sharePhoto = new SharePhoto.Builder()
+//                    .setBitmap(bit)
+//                    .build();
+//            SharePhotoContent sharePhotoContent = new SharePhotoContent.Builder()
+//                    .addPhoto(sharePhoto)
+//                    .build();
+//            // Set the content want to share.
+//            sbtn_fb.setShareContent(sharePhotoContent);
         }
     }
 

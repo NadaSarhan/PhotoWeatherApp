@@ -10,7 +10,6 @@ import com.nada.photoweatherapp.R;
 
 public class AlbumActivity extends AppCompatActivity {
 
-    private TextView text;
     private ImageView pic;
 
     @Override
@@ -20,10 +19,7 @@ public class AlbumActivity extends AppCompatActivity {
         setContentView(R.layout.activity_album);
 
         // assign variables
-        text = (TextView) findViewById(R.id.text);
         pic = (ImageView) findViewById(R.id.album_pic);
-
-//        text.setText();
 
     }
 
