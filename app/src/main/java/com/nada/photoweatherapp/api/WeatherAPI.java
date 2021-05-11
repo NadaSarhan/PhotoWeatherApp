@@ -1,4 +1,4 @@
-package com.nada.photoweatherapp.qpi;
+package com.nada.photoweatherapp.api;
 
 import com.nada.photoweatherapp.model.Weather;
 
