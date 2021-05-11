@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PhotoWeatherApp</string>
+    <string name="demo">Press the button to take image</string>
+    <string name="camera">Camera</string>
+    <string name="history">History</string>
+    <string name="facebook_app_id">288403692976939</string>
+    <string name="fb_btn">login to share on facebook</string>
+</resources>
